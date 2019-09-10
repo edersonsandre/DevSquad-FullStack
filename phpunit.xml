@@ -11,6 +11,7 @@
     <testsuites>
         <testsuite name="Unit">
             <directory suffix="Test.php">./tests/Unit</directory>
+            <exclude>./app/Http/Requests</exclude>
         </testsuite>
 
         <testsuite name="Feature">
@@ -30,4 +31,7 @@
         <server name="QUEUE_CONNECTION" value="sync"/>
         <server name="SESSION_DRIVER" value="array"/>
     </php>
+    <logging>
+        <log type="coverage-html" target="./report" lowUpperBound="50" highLowerBound="80" />
+    </logging>
 </phpunit>

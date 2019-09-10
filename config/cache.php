@@ -84,6 +84,11 @@ return [
             'table' => env('DYNAMODB_CACHE_TABLE', 'cache'),
         ],
 
+        'tfile' => [
+            'driver' => 'tfile',
+            'path'   => storage_path('framework/cache')
+        ],
+
     ],
 
     /*

@@ -1,0 +1,26 @@
+.w-64 {
+  width: 64px;
+}
+
+.w-100 {
+  width: 100px;
+}
+
+.w-120 {
+  width: 120px;
+}
+
+.w-200 {
+  width: 200px;
+}
+
+.has-error .form-input-error{
+    color: #ff2d55;
+}
+
+tr.delete-0,
+tr.delete-0 td{
+    color: #999 !important;
+    font-style: italic;
+    background: #f7f0f1;
+}
