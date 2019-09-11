@@ -11,10 +11,7 @@ use Illuminate\Support\Facades\Cache;
 
 class ProdutosEvent
 {
-    use SerializesModels;
-
-//    use Dispatchable, InteractsWithSockets, SerializesModels;
-
+    use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public function saving(Produtos $model)
     {

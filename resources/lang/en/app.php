@@ -16,4 +16,5 @@ return [
     'action' => 'Action',
     'novo-registro' => 'New Record',
     'registro' => 'Record',
+    'envio-arquivos' => 'File Upload',
 ];

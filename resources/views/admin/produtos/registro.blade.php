@@ -13,7 +13,7 @@
         <div class="panel-body">
             <form method="POST" class="frm-ajax" action="{!! route('admin.produtos.save') !!}" enctype="multipart/form-data">
                 @csrf
-                @input(['type'=>'hidden', 'name'=>'id'])
+                @squad_input(['type'=>'hidden', 'name'=>'id'])
 
                 <div class="row">
                     <div class="col-md-6">

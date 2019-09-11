@@ -63,10 +63,6 @@ $("a.delete").on('click', function (e) {
 $("a.visualizar").on('click', function (e) {
     e.preventDefault();
 
-    // const ipAPI = 'https://api.ipify.org?format=json'
-    const ipAPI = $(this).attr('href');
-
-
     $.ajax({
         url: $(this).attr('href'),
         type: 'GET',
@@ -77,6 +73,33 @@ $("a.visualizar").on('click', function (e) {
             })
         }
     });
+});
+
+var vue;
+
+var showModal = function () {
+    Swal.fire({
+        html: "<squad-upload-produto></squad-upload-produto>",
+        width: 600,
+        showCancelButton: false,
+        showConfirmButton: false
+    })
+
+    vue = new Vue({
+        el: Swal.getContent()
+    })
+}
+
+document.getElementById("upload-file-produtos").addEventListener("click", showModal);
+
+$("a.upload-file-produtos").on('click', function (e) {
+    e.preventDefault();
+
+    Swal.fire({
+        html: "a<squad-button-upload></squad-button-upload>a<component :is='squad-button-upload'></component>\n" +
+            " ",
+        width: 600
+    })
 });
 
 function clearErrorInputs() {

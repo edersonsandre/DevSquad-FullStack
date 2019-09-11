@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\AbstractController;
 use App\Http\Requests\Admin\ProdutoRequest;
+use App\Http\Requests\Admin\ProdutoUploadCSVRequest;
 use App\Model\Produtos;
-use Illuminate\Support\Facades\App;
-
+use App\Model\ProdutosUpload;
 
 class ProdutosController extends AbstractController
 {
@@ -14,6 +14,22 @@ class ProdutosController extends AbstractController
     {
         $this->_model = new Produtos();
         $this->_title = "Produtos";
+    }
+
+    public function upload(ProdutoUploadCSVRequest $request)
+    {
+        $response['status'] = false;
+
+        try {
+            $produtoUpload = new ProdutosUpload();
+            $produtoUpload->_save($request->all());
+
+            $response['status'] = true;
+        } catch (\Exception $e) {
+            $response['message'] = $e->getMessage();
+        }
+
+        return $response;
     }
 
     public function save(ProdutoRequest $request)
@@ -40,7 +56,8 @@ class ProdutosController extends AbstractController
         return $view;
     }
 
-    public function visualizar($id = null){
+    public function visualizar($id = null)
+    {
         try {
             if (is_null($id))
                 throw new \Exception(trans('app.registro-nao-encontrado'));

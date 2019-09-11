@@ -10,11 +10,12 @@
     "require": {
         "php": "^7.1.3",
         "fideloper/proxy": "^4.0",
+        "aws/aws-sdk-php-laravel": "^3.3",
+        "league/flysystem-aws-s3-v3": "^1.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "phpunit/php-code-coverage": "^6.1",
-        "unikent/tfilecache": "^2.0",
-        "laravelcollective/html": "~6.0"
+        "unikent/tfilecache": "^2.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

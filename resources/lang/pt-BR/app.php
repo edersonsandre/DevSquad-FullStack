@@ -16,5 +16,6 @@ return [
     'action' => 'Ação',
     'novo-registro' => 'Novo Registro',
     'registro' => 'Registro',
+    'envio-arquivos' => 'Envio Arquivos',
 
 ];

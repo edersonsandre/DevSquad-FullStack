@@ -3,8 +3,8 @@
 @section('content')
 
     <div class="text-right">
-        <a class="btn btn-primary novo-registro" href="" title="Bootstrap 3 themes generator">{!! trans('app.novo-registro') !!}</a>
-
+        <a class="btn btn-success upload-file-produto2s" id="upload-file-produtos" >{!! trans('app.envio-arquivos') !!}</a>
+        <a class="btn btn-primary novo-registro" >{!! trans('app.novo-registro') !!}</a>
         <hr/>
     </div>
 

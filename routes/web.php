@@ -32,4 +32,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'configs-app']], fun
     Route::get('/produtos/visualizar/{id}', 'Admin\ProdutosController@visualizar')->name('admin.produtos.visualizar')->where(['id' => '[0-9]+']);
     Route::delete('/produtos/{id}', 'Admin\ProdutosController@delete')->name('admin.produtos.delete')->where(['id' => '[0-9]+']);
     Route::post('/produtos/save', 'Admin\ProdutosController@save')->name('admin.produtos.save');
+    Route::post('/produtos/upload', 'Admin\ProdutosController@upload')->name('admin.produtos.upload');
 });

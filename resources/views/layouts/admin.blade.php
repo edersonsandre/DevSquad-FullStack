@@ -33,14 +33,14 @@
 
     <aside>
         <div id="sidebar" class="nav-collapse ">
-            <ul class="sidebar-menu">
+            <ul class="sidebar-menu" >
                 @include('includes.admin.menu')
             </ul>
         </div>
     </aside>
 
     <section id="main-content">
-        <section class="wrapper">
+        <section class="wrapper" id="vue-admin">
             @yield('content')
         </section>
 
@@ -69,6 +69,7 @@
 <script src="/src/plugins/maskmoney/dist/jquery.maskMoney.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script type="text/javascript" src="/src/plugins/jquery/jquery.form.js"></script>
+<script src="/js/app.js"></script>
 <script src="/js/admin.js"></script>
 
 

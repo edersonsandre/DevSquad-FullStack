@@ -43,6 +43,26 @@ class UploadHelper
         return $imagem;
     }
 
+    public static function produtosCSV($file)
+    {
+        $filename = null;
+        if (is_object($file)) {
+            // @codeCoverageIgnoreStart
+            $filename = time() . '-' . uniqid() . '.' . $file->getClientOriginalExtension();
+
+            $upload = $file->storeAs('uploads/csv', $filename);
+
+
+//
+//            if ($file->move($path, $filename)) {
+//                $imagem = $path . $filename;
+//            }
+            // @codeCoverageIgnoreEnd
+        }
+
+        return $filename;
+    }
+
     /**
      * @codeCoverageIgnore
      */
