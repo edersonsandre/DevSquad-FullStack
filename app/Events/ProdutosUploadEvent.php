@@ -39,7 +39,9 @@ class ProdutosUploadEvent
 
     public function clear($model)
     {
-        $model->user = Auth::user()->id;
+        if (empty($model->user)) {
+            $model->user = Auth::user()->id;
+        }
 
         return $model;
     }

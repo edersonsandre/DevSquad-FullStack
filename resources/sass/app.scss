@@ -1,5 +1,6 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
 
 // Variables
 @import 'variables';
@@ -8,6 +9,8 @@
 @import '~bootstrap/scss/bootstrap';
 
 @import '~sweetalert2/src/sweetalert2.scss';
+
+@import 'welcome';
 
 
 .w-64{

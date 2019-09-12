@@ -56,7 +56,7 @@ class ImportProdutosCommand extends Command
 
                 if ($upload->processado == 0) {
                     $upload->processado = 1;
-                    //$upload->save();
+                    $upload->save();
 
                     $path = Storage::disk()->path("uploads/csv");
                     $file = $path . "/" . $upload->file;
@@ -86,8 +86,9 @@ class ImportProdutosCommand extends Command
                                 }
                             }
 
+                            unlink($file);
                             $upload->processado = 2;
-                            //$upload->save();
+                            $upload->save();
                         }
                     }
                 }
@@ -101,10 +102,6 @@ class ImportProdutosCommand extends Command
     {
         $user = (new \App\Model\Usuarios)->_get($upload->user);
         Mail::to($user)->send(new ProdutosUploadMail($upload, $log));
-
-
-        exit("<pre> => " . print_r($log, true) . "</pre>");
-        exit("<pre> => " . print_r("EMAIL", true) . "</pre>");
     }
 
 }

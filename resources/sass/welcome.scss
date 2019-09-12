@@ -1,0 +1,185 @@
+body {
+    font-family: $font-base;
+    background: #fff;
+    color: $dark-light;
+}
+
+header {
+    background-image: url('../src/imagem/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 889px;
+
+    @media (max-width: 576px) {
+        background-position: right 25% bottom 45%;
+    }
+}
+
+.text-dark-light {
+    color: $dark-light
+}
+
+.bg-grey {
+    background-color: $gray;
+}
+
+.text-dark-lighter {
+    color: $dark-lighter
+}
+
+.btn-rounded {
+    border-radius: 30px;
+}
+
+.logo {
+    text-align: left;
+    padding-top: 5px;
+
+    img {
+        margin-left: 150px !important;
+    }
+
+    .visible-xs {
+        display: none;
+    }
+
+    .hidden-xs {
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        img {
+            margin: 10px 10px 0px 10px !important;
+            width: 70px !important;
+        }
+
+        .visible-xs {
+            display: block;
+        }
+
+        .hidden-xs {
+            display: none;
+        }
+
+
+    }
+}
+
+.banner {
+    margin-top: 0.625rem;
+    padding: 10rem 0 0 9rem;
+
+    @media (min-width: 768px) {
+        max-width: 100%;
+    }
+
+    @media (max-width: 576px) {
+        padding: 15rem 1rem 1rem 1rem;
+        max-width: 100%;
+    }
+
+    h1 {
+        color: #fff;
+        font-size: 55px;
+        letter-spacing: 1px;
+        line-height: 50px;
+        font-weight: bold;
+        text-shadow: 0.02em 0.02em 0.02em #000;
+    }
+
+    h4 {
+        max-width: 400px;
+        text-shadow: 0.02em 0.02em 0.02em #000;
+    }
+
+    p {
+        text-shadow: 0.02em 0.02em 0.02em #000;
+        color: #fff;
+        padding-top: 10px;
+    }
+
+    button {
+        padding: 5px 50px;
+        font-weight: bold;
+
+        @media (max-width: 576px) {
+            width: 100%;
+        }
+    }
+}
+
+.banner-rodape {
+    background-color: $gray;
+
+    span {
+        font-size: 24px;
+
+        .destaque {
+            color: $green;
+        }
+    }
+
+    .pl-5{
+        padding-left: 0 !important;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+.financiamento {
+    justify-content: flex-start !important;
+    text-align: right;
+
+    svg {
+        width: 60px;
+        float: left;
+    }
+
+    .descricao {
+        text-align: left;
+        max-width: 190px;
+        text-align: left;
+        float: left;
+        font-size: 12px;
+        margin-top: 20px;
+
+    }
+}
+
+.testemunho {
+    width: 712px;
+    max-width: 100%;
+    display: inline-block;
+    text-align: center;
+
+    .user {
+        border-bottom: 1px solid #F3F3F3;
+        padding-bottom: 0.625rem;
+    }
+}
+
+footer {
+    background-color: #575757;
+
+    svg {
+        width: 70px;
+    }
+
+    li a {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .redes {
+
+        svg {
+            width: 30px !important;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 576px) {
+            margin-top: 10px;
+        }
+
+    }
+}
